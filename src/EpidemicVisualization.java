@@ -91,6 +91,7 @@ public class EpidemicVisualization extends JPanel {
         for (int i = 0; i<=EpidemicSimulation.x; i++){
             g2d.drawRect(WIDTH+i/4, HEIGHT-EpidemicSimulation.illHumans.get(i) , 1,EpidemicSimulation.illHumans.get(i) );
         }
+        // tutaj trzeba dodać legendę
 
     }
 }
