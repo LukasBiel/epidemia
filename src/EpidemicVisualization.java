@@ -5,6 +5,7 @@ import java.awt.*;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
+// klasa wizualizacji
 public class EpidemicVisualization extends JPanel {
     private static final DecimalFormat df = new DecimalFormat("0.0");
     public static final int WIDTH = 600;
