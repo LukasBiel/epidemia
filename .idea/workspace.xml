@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="komentarz o legendzie">
+      <change afterPath="$PROJECT_DIR$/src/Animation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FastSimulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Populacja.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Symulacja.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Human$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Human$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpidemicSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicSimulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/EpidemicVisualization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicVisualization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +42,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2JbHPP3W1OzoGSpTKmCsqLnsbcy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -45,7 +58,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.EpidemicSimulation (3)">
+  <component name="RunManager" selected="Application.EpidemicSimulation">
     <configuration name="EpidemicSimulation (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="EpidemicSimulation" />
       <module name="epidemia" />
@@ -76,11 +89,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EpidemicSimulation" />
         <item itemvalue="Application.EpidemicSimulation (3)" />
         <item itemvalue="Application.EpidemicSimulation (2)" />
         <item itemvalue="Application.EpidemicSimulation (1)" />
-        <item itemvalue="Application.EpidemicSimulation" />
-        <item itemvalue="Application.EpidemicSimulation (3)" />
+        <item itemvalue="Application.EpidemicSimulation (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -148,8 +161,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nowe repozytorium" />
-    <MESSAGE value="komentarz o legendzie" />
-    <option name="LAST_COMMIT_MESSAGE" value="komentarz o legendzie" />
+    <option name="LAST_COMMIT_MESSAGE" value="nowe repozytorium" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -158,16 +170,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="21" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/EpidemicSimulation.java</url>
-          <line>197</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/EpidemicVisualization.java</url>
-          <line>91</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

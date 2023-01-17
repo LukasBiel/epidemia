@@ -72,25 +72,30 @@ public class EpidemicVisualization extends JPanel {
             g.setColor(color);
             g.fillRect(x, y, 5, 5);
         }
+        // Udział procentowy i dzień
         g.setColor(Color.BLUE);
         g.fillRect(620,10,90,35);
-        double x = (EpidemicSimulation.HealthyHumans/EpidemicSimulation.NUM_HUMANS)*100;
-        double x2 = EpidemicSimulation.DeadHumans/EpidemicSimulation.NUM_HUMANS*100;
-        double x3 = EpidemicSimulation.IllHumans/EpidemicSimulation.NUM_HUMANS*100;
+        double x = Animation.HealthyHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
+        double x2 = Animation.DeadHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
+        double x3 = Animation.IllHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
         String value = "Zdrowi ludzie: "+df.format(x)+"%";
         g.drawString(value, 620, 70);
         String value2 = "Zmarli: "+df.format(x2)+"%";
         g.drawString(value2, 620, 110);
         String value3 = "Chorzy ludzie: "+df.format(x3)+"%";
         g.drawString(value3, 620, 90);
-        String value4 = "Dzień "+EpidemicSimulation.Day;
+        String value4 = "Dzień "+ Animation.Day;
         g.setFont(new Font("Arial", Font.BOLD, 16));
         g.setColor(Color.black);
         g.drawString(value4, 630, 32);
+
+        // wykres
+        if (Animation.illHumans.size()>0){
         Graphics2D g2d = (Graphics2D) g;
         g2d.setColor(Color.RED);
-        for (int i = 0; i<=EpidemicSimulation.x; i++){
-            g2d.drawRect(WIDTH+i/4, HEIGHT-EpidemicSimulation.illHumans.get(i) , 1,EpidemicSimulation.illHumans.get(i) );
+        for (int i = 0; i< Animation.argument_wykres; i++){
+            g2d.drawRect(WIDTH+i/4, HEIGHT-Animation.illHumans.get(i) , 1,Animation.illHumans.get(i) );
+        }
         }
         // tutaj trzeba dodać legendę
 

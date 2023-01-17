@@ -3,7 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 
-public class Human {
+public class Human extends Symulacja {
     HealthStatus health;
     double x; // x-coordinate in the 1 by 1 square
     double y; // y-coordinate in the 1 by 1 square
@@ -54,23 +54,23 @@ public class Human {
         }
     }
     public void got_ill(int time) {
-        EpidemicSimulation.HealthyHumans--;
-        EpidemicSimulation.IllHumans++;
+        Animation.HealthyHumans--;
+        Animation.IllHumans++;
         Random random = new Random();
         javax.swing.Timer timer2 = new Timer(time, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                EpidemicSimulation.IllHumans--;
+                Animation.IllHumans--;
                 double y = random.nextDouble();
                 if (health == HealthStatus.ILL && y <= 0.95) {
-                    EpidemicSimulation.HealthyHumans++;
+                    Animation.HealthyHumans++;
                     health = HealthStatus.CONVALESCENT;
                     got_convalescent();
                 }
 
                 if (health == HealthStatus.ILL && y > 0.95) {
                     health = HealthStatus.DEAD;
-                    EpidemicSimulation.DeadHumans++;
+                    Animation.DeadHumans++;
                 }
             }
         });
