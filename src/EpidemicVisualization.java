@@ -94,6 +94,12 @@ public class EpidemicVisualization extends JPanel {
             g2d.drawRect(WIDTH+i/4, HEIGHT-Animation.illHumans.get(i) , 1,Animation.illHumans.get(i) );
         }
         }
+        if (Animation.czy_koniec==1){
+            String koniec = "Koniec epidemii!";
+            g.setFont(new Font("Arial", Font.BOLD, 12));
+            g.drawString(koniec, 620, 135);
+
+        }
         // tutaj trzeba dodać legendę
 
     }
