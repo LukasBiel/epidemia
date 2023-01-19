@@ -1,6 +1,4 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class Animal {
@@ -53,31 +51,24 @@ public class Animal {
     }
     public void got_ill(int time) {
         Random random = new Random();
-        javax.swing.Timer timer2 = new Timer(time, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                double y = random.nextDouble();
-                if (health == HealthStatus.ILL && y <= 0.95) {
-                    health = HealthStatus.CONVALESCENT;
-                    got_convalescent();
-                }
-
-                if (health == HealthStatus.ILL && y > 0.95) {
-                    health = HealthStatus.DEAD;}
+        javax.swing.Timer timer2 = new Timer(time, e -> {
+            double y = random.nextDouble();
+            if (health == HealthStatus.ILL && y <= 0.95) {
+                health = HealthStatus.CONVALESCENT;
+                got_convalescent();
             }
+
+            if (health == HealthStatus.ILL && y > 0.95) {
+                health = HealthStatus.DEAD;}
         });
         timer2.start();
         timer2.setRepeats(false);
 
     }
     public void got_convalescent(){
-        Timer timer3 = new Timer(20000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (health==HealthStatus.CONVALESCENT)
-                    health = HealthStatus.HEALTHY;
-            }
-
+        Timer timer3 = new Timer(20000, e -> {
+            if (health==HealthStatus.CONVALESCENT)
+                health = HealthStatus.HEALTHY;
         });
         timer3.start();
         timer3.setRepeats(false);

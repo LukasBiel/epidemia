@@ -28,73 +28,66 @@ public class Animation extends Symulacja {
         animals[0].got_ill(TIME_OF_ILLNESS);
         
         Random random = new Random();
-        Timer timer = new Timer(TIME_OF_MOVEMENT, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                argument_wykres++;
-                illHumans.add(IllHumans);
-                pan.repaint();
-                //poruszanie się
-                for (Human human : humans) {
-                    if (human.getHealthStatus()!= HealthStatus.DEAD){
-                        double dx = random.nextDouble() * 2 - 1;
-                        double dy = random.nextDouble() * 2 - 1;
-                        human.setX(human.getX() + dx * MOBILITY);
-                        human.setY(human.getY() + dy * MOBILITY);}
-                }
-                for (Animal animal : animals) {
-                    if (animal.getHealthStatus()!= HealthStatus.DEAD){
-                        double dx = random.nextDouble() * 2 - 1;
-                        double dy = random.nextDouble() * 2 - 1;
-                        animal.setX(animal.getX() + dx * MOBILITY);
-                        animal.setY(animal.getY() + dy * MOBILITY);}
-                }
-                // zarażanie się ludzi
-                for (int i = 0; i < EpidemicSimulation.NUM_HUMANS; i++) {
-                    Human human1 = humans[i];
-                    for (int j = i + 1; j < EpidemicSimulation.NUM_HUMANS; j++) {
-                        Human human2 = humans[j];
-                        double distance = Math.sqrt(Math.pow(human1.getX() - human2.getX(), 2) +
-                                Math.pow(human1.getY() - human2.getY(), 2));
-
-                        if (distance < 0.05 && random.nextDouble() <= HUMAN_ILLNESS_PROBABLITY && human2.getHealthStatus()==HealthStatus.ILL && human1.getHealthStatus()==HealthStatus.HEALTHY) {
-                            human1.setHealthStatus(HealthStatus.ILL);
-                            human1.got_ill(TIME_OF_ILLNESS);
-                        }
-                        if (distance < 0.05 && random.nextDouble() <= HUMAN_ILLNESS_PROBABLITY && human1.getHealthStatus()==HealthStatus.ILL && human2.getHealthStatus()==HealthStatus.HEALTHY) {
-                            human2.setHealthStatus(HealthStatus.ILL);
-                            human2.got_ill(TIME_OF_ILLNESS);
-                        }
-                    }
-                }
-                // zarażanie się zwierząt
-                for (int i = 0; i < EpidemicSimulation.NUM_ANIMALS; i++) {
-                    Animal animal1 = animals[i];
-                    for (int j = i + 1; j < EpidemicSimulation.NUM_ANIMALS; j++) {
-                        Animal animal2 = animals[j];
-                        double distance = Math.sqrt(Math.pow(animal1.getX() - animal2.getX(), 2) +
-                                Math.pow(animal1.getY() - animal2.getY(), 2));
-                        if (distance < 0.05 && random.nextDouble() <= ANIMAL_ILLNESS_PROPABILITY && animal2.getHealthStatus()==HealthStatus.ILL && animal1.getHealthStatus()==HealthStatus.HEALTHY) {
-                            animal1.setHealthStatus(HealthStatus.ILL);
-                            animal1.got_ill(TIME_OF_ILLNESS);
-                        }
-                        if (distance < 0.05 && random.nextDouble() <= ANIMAL_ILLNESS_PROPABILITY && animal1.getHealthStatus()==HealthStatus.ILL && animal2.getHealthStatus()==HealthStatus.HEALTHY) {
-                            animal2.setHealthStatus(HealthStatus.ILL);
-                            animal2.got_ill(TIME_OF_ILLNESS);
-                        }
-                    }
-                }
-
-
+        Timer timer = new Timer(TIME_OF_MOVEMENT, e -> {
+            argument_wykres++;
+            illHumans.add(IllHumans);
+            pan.revalidate();
+            pan.repaint();
+            //poruszanie się
+            for (Human human : humans) {
+                if (human.getHealthStatus()!= HealthStatus.DEAD){
+                    double dx = random.nextDouble() * 2 - 1;
+                    double dy = random.nextDouble() * 2 - 1;
+                    human.setX(human.getX() + dx * MOBILITY);
+                    human.setY(human.getY() + dy * MOBILITY);}
             }
+            for (Animal animal : animals) {
+                if (animal.getHealthStatus()!= HealthStatus.DEAD){
+                    double dx = random.nextDouble() * 2 - 1;
+                    double dy = random.nextDouble() * 2 - 1;
+                    animal.setX(animal.getX() + dx * MOBILITY);
+                    animal.setY(animal.getY() + dy * MOBILITY);}
+            }
+            // zarażanie się ludzi
+            for (int i = 0; i < EpidemicSimulation.NUM_HUMANS; i++) {
+                Human human1 = humans[i];
+                for (int j = i + 1; j < EpidemicSimulation.NUM_HUMANS; j++) {
+                    Human human2 = humans[j];
+                    double distance = Math.sqrt(Math.pow(human1.getX() - human2.getX(), 2) +
+                            Math.pow(human1.getY() - human2.getY(), 2));
+
+                    if (distance < 0.05 && random.nextDouble() <= HUMAN_ILLNESS_PROBABLITY && human2.getHealthStatus()==HealthStatus.ILL && human1.getHealthStatus()==HealthStatus.HEALTHY) {
+                        human1.setHealthStatus(HealthStatus.ILL);
+                        human1.got_ill(TIME_OF_ILLNESS);
+                    }
+                    if (distance < 0.05 && random.nextDouble() <= HUMAN_ILLNESS_PROBABLITY && human1.getHealthStatus()==HealthStatus.ILL && human2.getHealthStatus()==HealthStatus.HEALTHY) {
+                        human2.setHealthStatus(HealthStatus.ILL);
+                        human2.got_ill(TIME_OF_ILLNESS);
+                    }
+                }
+            }
+            // zarażanie się zwierząt
+            for (int i = 0; i < EpidemicSimulation.NUM_ANIMALS; i++) {
+                Animal animal1 = animals[i];
+                for (int j = i + 1; j < EpidemicSimulation.NUM_ANIMALS; j++) {
+                    Animal animal2 = animals[j];
+                    double distance = Math.sqrt(Math.pow(animal1.getX() - animal2.getX(), 2) +
+                            Math.pow(animal1.getY() - animal2.getY(), 2));
+                    if (distance < 0.05 && random.nextDouble() <= ANIMAL_ILLNESS_PROPABILITY && animal2.getHealthStatus()==HealthStatus.ILL && animal1.getHealthStatus()==HealthStatus.HEALTHY) {
+                        animal1.setHealthStatus(HealthStatus.ILL);
+                        animal1.got_ill(TIME_OF_ILLNESS);
+                    }
+                    if (distance < 0.05 && random.nextDouble() <= ANIMAL_ILLNESS_PROPABILITY && animal1.getHealthStatus()==HealthStatus.ILL && animal2.getHealthStatus()==HealthStatus.HEALTHY) {
+                        animal2.setHealthStatus(HealthStatus.ILL);
+                        animal2.got_ill(TIME_OF_ILLNESS);
+                    }
+                }
+            }
+
+
         });
         timer.start();
-        Timer Dni = new Timer(1000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Day++;
-            }
-        });
+        Timer Dni = new Timer(1000, e -> Day++);
         Dni.start();
         //Co jakiś czas ludzie jedzą 1/5 zwierząt
 

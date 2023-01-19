@@ -1,8 +1,5 @@
-
-
 import javax.swing.*;
 import java.awt.*;
-import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 // klasa wizualizacji
@@ -11,8 +8,8 @@ public class EpidemicVisualization extends JPanel {
     public static final int WIDTH = 600;
     public static final int HEIGHT = 600;
 
-    private Human[] humans;
-    private Animal[] animals;
+    private final Human[] humans;
+    private final Animal[] animals;
 
     public EpidemicVisualization(Human[] humans, Animal[] animals) {
         this.humans = humans;
@@ -36,7 +33,7 @@ public class EpidemicVisualization extends JPanel {
                     color = Color.RED;
                     break;
                 case CONVALESCENT:
-                    color = Color.YELLOW;
+                    color = Color.BLUE;
                     break;
                 case DEAD:
                     color = Color.BLACK;
@@ -61,7 +58,7 @@ public class EpidemicVisualization extends JPanel {
                     color = Color.RED;
                     break;
                 case CONVALESCENT:
-                    color = Color.YELLOW;
+                    color = Color.BLUE;
                     break;
                 case DEAD:
                     color = Color.BLACK;
