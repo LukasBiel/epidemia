@@ -18,6 +18,7 @@ public class Animation extends Symulacja {
     public static double DeadHumans = 0;
     public static final int TIME_OF_ILLNESS = 10000;
     public static final int TIME_OF_MOVEMENT = 100;
+    public static int czy_koniec = 0;
     
     public Animation(Human[] humans, Animal[] animals) {
         this.humans = humans;
@@ -28,12 +29,22 @@ public class Animation extends Symulacja {
         animals[0].got_ill(TIME_OF_ILLNESS);
         
         Random random = new Random();
+        Timer Dni = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Day++;
+            }
+        });
+        Dni.start();
+
+
         Timer timer = new Timer(TIME_OF_MOVEMENT, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 argument_wykres++;
                 illHumans.add(IllHumans);
                 pan.repaint();
+
                 //poruszanie się
                 for (Human human : humans) {
                     if (human.getHealthStatus()!= HealthStatus.DEAD){
@@ -85,20 +96,20 @@ public class Animation extends Symulacja {
                     }
                 }
 
-
             }
         });
         timer.start();
-        Timer Dni = new Timer(1000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Day++;
-            }
-        });
-        Dni.start();
+
+
         //Co jakiś czas ludzie jedzą 1/5 zwierząt
 
         for (int i = 0;i<1000;i++){
+            if (IllHumans == 0){
+                czy_koniec = 1;
+                pan.repaint();
+                timer.stop();
+                break;
+            }
 
             //dzieje się to co 5 sekund
             try
@@ -109,6 +120,7 @@ public class Animation extends Symulacja {
             {
                 ex.printStackTrace();
             }
+
 
             // Sprawdzam ile zwierząt jest chorych i ile zdrowych
             for (int j = 0; j < EpidemicSimulation.NUM_ANIMALS; j++) {
