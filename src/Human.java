@@ -1,6 +1,4 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class Human extends Symulacja {
@@ -57,21 +55,18 @@ public class Human extends Symulacja {
         Animation.HealthyHumans--;
         Animation.IllHumans++;
         Random random = new Random();
-        javax.swing.Timer timer2 = new Timer(time, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Animation.IllHumans--;
-                double y = random.nextDouble();
-                if (health == HealthStatus.ILL && y <= 0.95) {
-                    Animation.HealthyHumans++;
-                    health = HealthStatus.CONVALESCENT;
-                    got_convalescent();
-                }
+        javax.swing.Timer timer2 = new Timer(time, e -> {
+            Animation.IllHumans--;
+            double y = random.nextDouble();
+            if (health == HealthStatus.ILL && y <= 0.95) {
+                Animation.HealthyHumans++;
+                health = HealthStatus.CONVALESCENT;
+                got_convalescent();
+            }
 
-                if (health == HealthStatus.ILL && y > 0.95) {
-                    health = HealthStatus.DEAD;
-                    Animation.DeadHumans++;
-                }
+            if (health == HealthStatus.ILL && y > 0.95) {
+                health = HealthStatus.DEAD;
+                Animation.DeadHumans++;
             }
         });
         timer2.start();
@@ -79,13 +74,9 @@ public class Human extends Symulacja {
     }
     public void got_convalescent(){
 
-        Timer timer3 = new Timer(15000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (health==HealthStatus.CONVALESCENT)
-                    health = HealthStatus.HEALTHY;
-            }
-
+        Timer timer3 = new Timer(15000, e -> {
+            if (health==HealthStatus.CONVALESCENT)
+                health = HealthStatus.HEALTHY;
         });
         timer3.start();
         timer3.setRepeats(false);
