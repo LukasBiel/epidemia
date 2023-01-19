@@ -1,4 +1,4 @@
-import javax.swing.*;
+
 
 
 public class EpidemicSimulation{
@@ -18,21 +18,22 @@ public class EpidemicSimulation{
         populacja.Tworzenie_populacji(NUM_HUMANS, NUM_ANIMALS);
 
         // Tworzymy panel który od razu wykonuje metode paintComponent
-        EpidemicVisualization panel = new EpidemicVisualization(humans, animals);
+        EntryScreen okno = new EntryScreen();
+        okno.Entry_Screen();
 
-        // Tworzymy ramkę gdzie się będą wyświetlać rzeczy
-        JFrame frame = new JFrame();
-        frame.setSize(EpidemicVisualization.WIDTH+145, EpidemicVisualization.HEIGHT+45);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // Dodajemy do ramki nasz panel, na początku powinien wyświetlać główny interfejs
-        frame.add(panel);
-        frame.setVisible(true);
+        Animation animacja = new Animation(EpidemicSimulation.humans, EpidemicSimulation.animals);
+        animacja.animacja(okno.panel);
+
+
+
+
+
 
 
 
         //if() albo animacja albo szybka symulacja (zależy od użytkownika)
-        Animation animacja = new Animation(humans, animals);
-        animacja.animacja(panel);
+        //Animation animacja = new Animation(humans, animals);
+        //animacja.animacja(panel);
 
         //FastSimualation fastsimulation = new FastSimulation(humans, animals)
         //fastsimaltion.simulation()
