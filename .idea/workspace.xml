@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="mobility">
+    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="nowe repozytorium">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Animal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EntryScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntryScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EpidemicSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Symulacja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Symulacja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/HealthStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/HealthStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpidemicVisualization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicVisualization.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,7 @@
         <item itemvalue="Application.EpidemicSimulation (3)" />
         <item itemvalue="Application.EpidemicSimulation (2)" />
         <item itemvalue="Application.EpidemicSimulation (1)" />
-        <item itemvalue="Application.EpidemicSimulation (3)" />
+        <item itemvalue="Application.EpidemicSimulation" />
       </list>
     </recent_temporary>
   </component>
@@ -170,21 +172,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="21" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Animation.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Animation.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/EntryScreen.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

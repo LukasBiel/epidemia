@@ -101,6 +101,35 @@ public class EpidemicVisualization extends JPanel {
 
         }
         // tutaj trzeba dodać legendę
+        g.setFont(new Font("Arial", Font.BOLD, 16));
+        g.setColor(Color.black);
+        g.drawString("Legenda", 780, 32);
+        g.setColor(Color.BLUE);
+        g.setFont(new Font("Arial", Font.BOLD, 12));
+        g.drawString("Ludzie", 750, 50);
+        g.drawString("Zwierzęta", 830, 50);
+        g.setFont(new Font("Arial", Font.PLAIN, 12));
+        g.drawString("Zdrowi", 750, 70);
+        g.drawString("Zdrowe", 830, 70);
+        g.drawString("Chorzy", 750, 90);
+        g.drawString("Chore", 830, 90);
+        g.drawString("Wyzdrowieli", 750, 110);
+        g.drawString("Wyzdrowiałe", 830, 110);
+        g.drawString("Zmarli", 750, 130);
+        g.drawString("Zmarłe", 830, 130);
+        g.setColor(Color.GREEN);
+        g.fillOval(790, 63, 5, 5);
+        g.fillRect(880, 64, 5, 5);
+        g.setColor(Color.RED);
+        g.fillOval(790, 83, 5, 5);
+        g.fillRect(880, 84, 5, 5);
+        g.setColor(Color.BLUE);
+        g.fillOval(818, 103, 5, 5);
+        g.fillRect(905, 104, 5, 5);
+        g.setColor(Color.BLACK);
+        g.fillOval(790, 123, 5, 5);
+        g.fillRect(880, 124, 5, 5);
+
 
     }
 }
