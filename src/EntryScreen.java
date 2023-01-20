@@ -7,9 +7,9 @@ public class EntryScreen extends JFrame {
     public static final JFrame frame = new JFrame();
 
     private final JFrame frame3 = new JFrame();
-
-
     public static int i = 0 ;
+
+
 
     public void Entry_Screen() {
 
@@ -97,6 +97,25 @@ public class EntryScreen extends JFrame {
 
         menu.add(animal_eating,c);
 
+        JLabel is_isolating = new JLabel("Włączyć izolację?");
+        c.gridx = 2;
+        c.gridy = 4;
+
+        menu.add(is_isolating,c);
+
+        JCheckBox isolation = new JCheckBox();
+        c.gridx = 3;
+        c.gridy = 4;
+        isolation.setSelected(false);
+        isolation.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        menu.add(isolation,c);
+
         JButton openAnim = new JButton("Uruchom Animację");
         c.gridx = 0;
         c.gridy = 4;
@@ -105,6 +124,23 @@ public class EntryScreen extends JFrame {
         JButton fastSimulation = new JButton("Uruchom szybką symulację");
         c.gridx = 1;
         c.gridy = 4;
+        fastSimulation.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SecondWindow sw = new SecondWindow();
+                frame2.dispose();
+                int totalDays = 0;
+                for (int i = 0; i < 100; i++) {
+                    sw.runSimulation();
+                    totalDays += sw.getDays();
+                }
+                double avgDays = totalDays / 100.0;
+                sw.setName("Może to okienko?");
+                sw.displayResults(avgDays);
+                sw.setVisible(true);
+            }
+
+        });
         menu.add(fastSimulation,c);
 
         frame2.setVisible(true);
@@ -133,8 +169,11 @@ public class EntryScreen extends JFrame {
 
 
 
-        fastSimulation.addActionListener(ae -> {
+        /*fastSimulation.addActionListener(ae -> {
             frame2.dispose();
-            frame3.setVisible(true);});
+            frame3.add(fastSimulation);
+            frame3.setVisible(true);
+            i = 2;
+        });*/
     }
 }

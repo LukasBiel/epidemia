@@ -72,9 +72,9 @@ public class EpidemicVisualization extends JPanel {
         // Udział procentowy i dzień
         g.setColor(Color.BLUE);
         g.fillRect(620,10,90,35);
-        double x = Animation.HealthyHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
-        double x2 = Animation.DeadHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
-        double x3 = Animation.IllHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
+        double x = Symulacja.HealthyHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
+        double x2 = Symulacja.DeadHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
+        double x3 = Symulacja.IllHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
         String value = "Zdrowi ludzie: "+df.format(x)+"%";
         g.drawString(value, 620, 70);
         String value2 = "Zmarli: "+df.format(x2)+"%";

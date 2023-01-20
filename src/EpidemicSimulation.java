@@ -32,7 +32,15 @@ public class EpidemicSimulation{
                 animacja.animacja(panel);
                 x=1;}
 
+            if (EntryScreen.i == 2){
+                EpidemicVisualization panel = new EpidemicVisualization(EpidemicSimulation.humans, EpidemicSimulation.animals);
+                FastSimulation fastSimulation = new FastSimulation(humans, animals);
+                EntryScreen.frame.add(panel);
+                fastSimulation.fastsimulation(panel);
+                x=2;}
 
+
+            }
 
         }
 
@@ -55,6 +63,6 @@ public class EpidemicSimulation{
         //FastSimualation fastsimulation = new FastSimulation(humans, animals)
         //fastsimaltion.simulation()
     }
-}
+
 
 

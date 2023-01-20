@@ -55,7 +55,7 @@ public class Animal {
             double y = random.nextDouble();
             if (health == HealthStatus.ILL && y <= 0.95) {
                 health = HealthStatus.CONVALESCENT;
-                got_convalescent();
+                got_convalescent(Symulacja.time_of_healing);
             }
 
             if (health == HealthStatus.ILL && y > 0.95) {
@@ -65,8 +65,8 @@ public class Animal {
         timer2.setRepeats(false);
 
     }
-    public void got_convalescent(){
-        Timer timer3 = new Timer(20000, e -> {
+    public void got_convalescent(int time){
+        Timer timer3 = new Timer(time, e -> {
             if (health==HealthStatus.CONVALESCENT)
                 health = HealthStatus.HEALTHY;
         });
