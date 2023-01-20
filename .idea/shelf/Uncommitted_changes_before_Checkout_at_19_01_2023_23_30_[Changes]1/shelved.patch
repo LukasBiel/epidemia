@@ -1,0 +1,71 @@
+Index: src/FastSimulation.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/FastSimulation.java b/src/FastSimulation.java
+--- a/src/FastSimulation.java	
++++ b/src/FastSimulation.java	
+@@ -8,7 +8,6 @@
+         this.animals = animals;
+     }
+     public void fastsimulation(){
+-
+     }
+ }
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,22 +1,19 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="komentarz o legendzie">
+-      <change afterPath="$PROJECT_DIR$/src/Animation.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/FastSimulation.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Populacja.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/Symulacja.java" afterDir="false" />
++    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="nowe repozytorium">
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation$1.class" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation$2.class" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Animal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Animal$1.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Animal$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Animal$2.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Animal.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization$1.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/epidemia/HealthStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/HealthStatus.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/epidemia/Human$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Human$1.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Human$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Human$2.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/out/production/epidemia/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Human.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/EpidemicSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicSimulation.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/EpidemicVisualization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicVisualization.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file

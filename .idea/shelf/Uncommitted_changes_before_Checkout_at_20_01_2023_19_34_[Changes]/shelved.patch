@@ -1,0 +1,37 @@
+Index: src/EpidemicVisualization.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import javax.swing.*;\r\nimport java.awt.*;\r\nimport java.text.DecimalFormat;\r\n\r\n// klasa wizualizacji\r\npublic class EpidemicVisualization extends JPanel {\r\n    private static final DecimalFormat df = new DecimalFormat(\"0.0\");\r\n    public static final int WIDTH = 600;\r\n    public static final int HEIGHT = 600;\r\n\r\n    private final Human[] humans;\r\n    private final Animal[] animals;\r\n\r\n    public EpidemicVisualization(Human[] humans, Animal[] animals) {\r\n        this.humans = humans;\r\n        this.animals = animals;\r\n    }\r\n\r\n    @Override\r\n    public void paintComponent(Graphics g) {\r\n        super.paintComponent(g);\r\n\r\n        // Draw the humans\r\n        for (Human human : humans) {\r\n            int x = (int) (human.getX() * WIDTH);\r\n            int y = (int) (human.getY() * HEIGHT);\r\n            Color color;\r\n            switch (human.getHealthStatus()) {\r\n                case HEALTHY:\r\n                    color = Color.GREEN;\r\n                    break;\r\n                case ILL:\r\n                    color = Color.RED;\r\n                    break;\r\n                case CONVALESCENT:\r\n                    color = Color.BLUE;\r\n                    break;\r\n                case DEAD:\r\n                    color = Color.BLACK;\r\n                    break;\r\n                default:\r\n                    throw new IllegalStateException(\"Invalid health status\");\r\n            }\r\n            g.setColor(color);\r\n            g.fillOval(x, y, 5, 5);\r\n        }\r\n\r\n        // Draw the animals\r\n        for (Animal animal : animals) {\r\n            int x = (int) (animal.getX() * WIDTH);\r\n            int y = (int) (animal.getY() * HEIGHT);\r\n            Color color;\r\n            switch (animal.getHealthStatus()) {\r\n                case HEALTHY:\r\n                    color = Color.GREEN;\r\n                    break;\r\n                case ILL:\r\n                    color = Color.RED;\r\n                    break;\r\n                case CONVALESCENT:\r\n                    color = Color.BLUE;\r\n                    break;\r\n                case DEAD:\r\n                    color = Color.BLACK;\r\n                    break;\r\n                default:\r\n                    throw new IllegalStateException(\"Invalid health status\");\r\n            }\r\n            g.setColor(color);\r\n            g.fillRect(x, y, 5, 5);\r\n        }\r\n        // Udział procentowy i dzień\r\n        g.setColor(Color.BLUE);\r\n        g.fillRect(620,10,90,35);\r\n        double x = Animation.HealthyHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;\r\n        double x2 = Animation.DeadHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;\r\n        double x3 = Animation.IllHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;\r\n        String value = \"Zdrowi ludzie: \"+df.format(x)+\"%\";\r\n        g.drawString(value, 620, 70);\r\n        String value2 = \"Zmarli: \"+df.format(x2)+\"%\";\r\n        g.drawString(value2, 620, 110);\r\n        String value3 = \"Chorzy ludzie: \"+df.format(x3)+\"%\";\r\n        g.drawString(value3, 620, 90);\r\n        String value4 = \"Dzień \"+ Animation.Day;\r\n        g.setFont(new Font(\"Arial\", Font.BOLD, 16));\r\n        g.setColor(Color.black);\r\n        g.drawString(value4, 630, 32);\r\n\r\n        // wykres\r\n        if (Animation.illHumans.size()>0){\r\n        Graphics2D g2d = (Graphics2D) g;\r\n        g2d.setColor(Color.RED);\r\n        for (int i = 0; i< Animation.argument_wykres; i++){\r\n            g2d.drawRect(WIDTH+i/4, HEIGHT-Animation.illHumans.get(i) , 1,Animation.illHumans.get(i) );\r\n        }\r\n        }\r\n        if (Animation.czy_koniec==1){\r\n            String koniec = \"Koniec epidemii!\";\r\n            g.setFont(new Font(\"Arial\", Font.BOLD, 12));\r\n            g.drawString(koniec, 620, 135);\r\n\r\n        }\r\n        // tutaj trzeba dodać legendę\r\n\r\n    }\r\n}\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/EpidemicVisualization.java b/src/EpidemicVisualization.java
+--- a/src/EpidemicVisualization.java	(revision 0374d25effb899c9dbaf35908a4fba1a67b811fe)
++++ b/src/EpidemicVisualization.java	(date 1674239606590)
+@@ -102,6 +102,7 @@
+         }
+         // tutaj trzeba dodać legendę
+ 
++
+     }
+ }
+ 
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"11\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 0374d25effb899c9dbaf35908a4fba1a67b811fe)
++++ b/.idea/misc.xml	(date 1674239614801)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
