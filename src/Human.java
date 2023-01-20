@@ -52,29 +52,29 @@ public class Human extends Symulacja {
         }
     }
     public void got_ill(int time) {
-        Animation.HealthyHumans--;
-        Animation.IllHumans++;
+        Symulacja.HealthyHumans--;
+        Symulacja.IllHumans++;
         Random random = new Random();
         javax.swing.Timer timer2 = new Timer(time, e -> {
-            Animation.IllHumans--;
+            Symulacja.IllHumans--;
             double y = random.nextDouble();
             if (health == HealthStatus.ILL && y <= 0.95) {
-                Animation.HealthyHumans++;
+                Symulacja.HealthyHumans++;
                 health = HealthStatus.CONVALESCENT;
-                got_convalescent();
+                got_convalescent(time_of_healing);
             }
 
             if (health == HealthStatus.ILL && y > 0.95) {
                 health = HealthStatus.DEAD;
-                Animation.DeadHumans++;
+                Symulacja.DeadHumans++;
             }
         });
         timer2.start();
         timer2.setRepeats(false);
     }
-    public void got_convalescent(){
+    public void got_convalescent(int time){
 
-        Timer timer3 = new Timer(15000, e -> {
+        Timer timer3 = new Timer(time, e -> {
             if (health==HealthStatus.CONVALESCENT)
                 health = HealthStatus.HEALTHY;
         });

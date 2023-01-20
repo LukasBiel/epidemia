@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="nowe repozytorium">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/HealthStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/HealthStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EpidemicVisualization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicVisualization.java" afterDir="false" />
-    </list>
+    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="wiecej pol i przycisków różnych =)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,11 +20,10 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="naprawa2" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,7 +32,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2JbHPP3W1OzoGSpTKmCsqLnsbcy" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -84,7 +82,7 @@
         <item itemvalue="Application.EpidemicSimulation (3)" />
         <item itemvalue="Application.EpidemicSimulation (2)" />
         <item itemvalue="Application.EpidemicSimulation (1)" />
-        <item itemvalue="Application.EpidemicSimulation" />
+        <item itemvalue="Application.EpidemicSimulation (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -111,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674168663597</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="wiecej pol i przycisków różnych =)">
+      <created>1674248956169</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674248956169</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,7 +165,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nowe repozytorium" />
     <MESSAGE value="mobility" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobility" />
+    <MESSAGE value="wiecej pol i przycisków różnych =)" />
+    <option name="LAST_COMMIT_MESSAGE" value="wiecej pol i przycisków różnych =)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
