@@ -34,18 +34,6 @@ public class EpidemicSimulation{
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
         //if() albo animacja albo szybka symulacja (zależy od użytkownika)
         //Animation animacja = new Animation(humans, animals);
         //animacja.animacja(panel);
