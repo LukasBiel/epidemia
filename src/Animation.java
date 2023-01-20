@@ -25,6 +25,7 @@ public class Animation extends Symulacja {
         this.animals = animals;
     }
     public void animacja(EpidemicVisualization pan){
+
         humans[0].got_ill(TIME_OF_ILLNESS);
         animals[0].got_ill(TIME_OF_ILLNESS);
         
@@ -44,6 +45,7 @@ public class Animation extends Symulacja {
                 argument_wykres++;
                 illHumans.add(IllHumans);
                 pan.repaint();
+
 
                 //poruszanie się
                 for (Human human : humans) {
