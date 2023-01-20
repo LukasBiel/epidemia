@@ -1,0 +1,34 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_20_01_2023_19_55_[Changes]" date="1674240966074" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_01_2023_19_55_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 20.01.2023 19:55 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/epidemia/EpidemicVisualization.class" />
+    <option name="AFTER_PATH" value="out/production/epidemia/EpidemicVisualization.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_01_2023_19_55_[Changes]/EpidemicVisualization.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/epidemia/HealthStatus.class" />
+    <option name="AFTER_PATH" value="out/production/epidemia/HealthStatus.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_01_2023_19_55_[Changes]/HealthStatus.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/epidemia/Animal.class" />
+    <option name="AFTER_PATH" value="out/production/epidemia/Animal.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_01_2023_19_55_[Changes]/Animal.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/epidemia/EpidemicVisualization$1.class" />
+    <option name="AFTER_PATH" value="out/production/epidemia/EpidemicVisualization$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_01_2023_19_55_[Changes]/EpidemicVisualization$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/epidemia/Human.class" />
+    <option name="AFTER_PATH" value="out/production/epidemia/Human.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_01_2023_19_55_[Changes]/Human.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/epidemia/EpidemicSimulation.class" />
+    <option name="AFTER_PATH" value="out/production/epidemia/EpidemicSimulation.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_01_2023_19_55_[Changes]/EpidemicSimulation.class" />
+  </binary>
+</changelist>

@@ -1,0 +1,70 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -28,7 +28,7 @@
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProblemsViewState">
+-    <option name="selectedTabId" value="ProjectErrors" />
++    <option name="selectedTabId" value="CurrentFile" />
+   </component>
+   <component name="ProjectId" id="2JbHPP3W1OzoGSpTKmCsqLnsbcy" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+@@ -36,15 +36,15 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "last_opened_file_path": "C:/Users/lukas/OneDrive/projekty/JAVA/epidemia",
+-    "settings.editor.selected.configurable": "vcs.Git"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/lukas/OneDrive/projekty/JAVA/epidemia&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+   }
+-}]]></component>
+-  <component name="RunManager" selected="Application.EpidemicSimulation (3)">
++}</component>
++  <component name="RunManager" selected="Application.EpidemicSimulation">
+     <configuration name="EpidemicSimulation (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="EpidemicSimulation" />
+       <module name="epidemia" />
+@@ -75,10 +75,10 @@
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Application.EpidemicSimulation" />
+         <item itemvalue="Application.EpidemicSimulation (3)" />
+         <item itemvalue="Application.EpidemicSimulation (2)" />
+         <item itemvalue="Application.EpidemicSimulation (1)" />
+-        <item itemvalue="Application.EpidemicSimulation" />
+         <item itemvalue="Application.EpidemicSimulation (2)" />
+       </list>
+     </recent_temporary>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_18" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+ </project>
+\ No newline at end of file
