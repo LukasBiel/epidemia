@@ -18,7 +18,7 @@ public class EntryScreen extends JFrame {
         GridBagConstraints c = new GridBagConstraints();
         frame2.setSize(EpidemicVisualization.WIDTH + 145, EpidemicVisualization.HEIGHT + 45);
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(EpidemicVisualization.WIDTH + 145, EpidemicVisualization.HEIGHT + 45);
+        frame.setSize(EpidemicVisualization.WIDTH + 350, EpidemicVisualization.HEIGHT + 45);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         frame2.add(menu);
@@ -127,17 +127,21 @@ public class EntryScreen extends JFrame {
         fastSimulation.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SecondWindow sw = new SecondWindow();
+                EpidemicSimulation.NUM_HUMANS = Integer.parseInt(num_of_humans.getText());
+                EpidemicSimulation.NUM_ANIMALS = Integer.parseInt(num_of_animals.getText());
+
+                Populacja populacja = new Populacja();
+                populacja.Tworzenie_populacji(EpidemicSimulation.NUM_HUMANS, EpidemicSimulation.NUM_ANIMALS);
+
+                Symulacja.HEALTHY_ANIMAL_PROPABILITY = Double.parseDouble(animal_eating.getText());
+                Symulacja.MOBILITY = Double.parseDouble(mobility.getText());
+                Symulacja.HUMAN_ILLNESS_PROBABLITY = Double.parseDouble(human_illness.getText());
+                Symulacja.ANIMAL_ILLNESS_PROPABILITY = Double.parseDouble(animal_illness.getText());
                 frame2.dispose();
-                int totalDays = 0;
-                for (int i = 0; i < 100; i++) {
-                    sw.runSimulation();
-                    totalDays += sw.getDays();
-                }
-                double avgDays = totalDays / 100.0;
-                sw.setName("Może to okienko?");
-                sw.displayResults(avgDays);
-                sw.setVisible(true);
+                i=2;
+
+
+
             }
 
         });
