@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="dane_od_uzytkownika">
+    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="nowe repozytorium">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EpidemicSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Animal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/HealthStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/HealthStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Human.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EpidemicVisualization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicVisualization.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +36,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2JbHPP3W1OzoGSpTKmCsqLnsbcy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,17 +44,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/lukas/OneDrive/projekty/JAVA/epidemia",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lukas/OneDrive/projekty/JAVA/epidemia&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.EpidemicSimulation">
     <configuration name="EpidemicSimulation (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="EpidemicSimulation" />
@@ -110,35 +114,7 @@
       <option name="project" value="LOCAL" />
       <updated>1674168663597</updated>
     </task>
-    <task id="LOCAL-00003" summary="legendaa">
-      <created>1674244227134</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1674244227134</updated>
-    </task>
-    <task id="LOCAL-00004" summary="legendaa">
-      <created>1674244376778</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1674244376778</updated>
-    </task>
-    <task id="LOCAL-00005" summary="dane_od_uzytkownika">
-      <created>1674245983669</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1674245983669</updated>
-    </task>
-    <task id="LOCAL-00006" summary="dane_od_uzytkownika">
-      <created>1674246023790</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1674246023790</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,9 +163,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nowe repozytorium" />
     <MESSAGE value="mobility" />
-    <MESSAGE value="legendaa" />
-    <MESSAGE value="dane_od_uzytkownika" />
-    <option name="LAST_COMMIT_MESSAGE" value="dane_od_uzytkownika" />
+    <option name="LAST_COMMIT_MESSAGE" value="mobility" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
