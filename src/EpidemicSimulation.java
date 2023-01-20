@@ -32,8 +32,6 @@ public class EpidemicSimulation{
                 animacja.animacja(panel);
                 x=1;}
 
-
-
         }
 
 
