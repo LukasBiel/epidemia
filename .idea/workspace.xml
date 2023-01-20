@@ -4,22 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="fajne pola i przyciski do klikania se">
-      <change afterPath="$PROJECT_DIR$/src/SecondWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Animation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Animation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EntryScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntryScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EpidemicSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EpidemicVisualization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicVisualization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FastSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FastSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Symulacja.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Symulacja.java" afterDir="false" />
-    </list>
+    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="wiecej pol i przycisków różnych =)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674168663597</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="wiecej pol i przycisków różnych =)">
+      <created>1674248956169</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674248956169</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,7 +165,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nowe repozytorium" />
     <MESSAGE value="mobility" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobility" />
+    <MESSAGE value="wiecej pol i przycisków różnych =)" />
+    <option name="LAST_COMMIT_MESSAGE" value="wiecej pol i przycisków różnych =)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
