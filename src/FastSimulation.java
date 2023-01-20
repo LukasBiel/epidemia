@@ -14,12 +14,11 @@ public class FastSimulation extends Symulacja {
     public FastSimulation(Human[] humans, Animal[] animals) {
         this.humans = humans;
         this.animals = animals;
-        panel = new EpidemicVisualization(EpidemicSimulation.humans, EpidemicSimulation.animals);
     }
 
 
-    public void fastsimulation(EpidemicVisualization panel){
-        EntryScreen.frame.add(FastSimulation.panel);
+    public void fastsimulation(){
+        //EntryScreen.frame.add(FastSimulation.panel);
         humans[0].got_ill(TIME_OF_ILLNESS/100);
         animals[0].got_ill(TIME_OF_ILLNESS/100);
 
@@ -93,10 +92,10 @@ public class FastSimulation extends Symulacja {
             if (IllHumans == 0){
                 czy_koniec = 1;
                 timer.stop();
+                Dni.stop();
                 break;
             }
 
-            //dzieje się to co 5 sekund
             try
             {
                 Thread.sleep(50);

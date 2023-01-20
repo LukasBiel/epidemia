@@ -5,9 +5,10 @@ public class SecondWindow extends JFrame {
     private int days;
     private int dead_percentage;
     public SecondWindow(){
-        this.setSize(EpidemicVisualization.WIDTH + 145, EpidemicVisualization.HEIGHT + 45);
+        this.setSize(600,  200);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setName("Wynik szybkiej symulacji");
+        this.setVisible(true);
 
     }
     public void runSimulation(){
@@ -18,13 +19,12 @@ public class SecondWindow extends JFrame {
     public int getDays(){
         return Symulacja.Day ;
     }
-    public void displayResults(double avgDays){
-        JPanel wyniki = new JPanel(new GridBagLayout());
-        GridBagConstraints c = new GridBagConstraints();
+    public void displayResults(double avgDays, JPanel wyniki, GridBagConstraints c){
+
         wyniki.setName("Okienko");
         this.add(wyniki);
-        JLabel num_of_days = new JLabel("Liczba dni:" + getDays());
 
+        JLabel num_of_days = new JLabel("Liczba dni:" + getDays());
         c.gridx = 0;
         c.gridy = 0;
         wyniki.add(num_of_days,c);
@@ -48,6 +48,7 @@ public class SecondWindow extends JFrame {
         c.gridx = 0;
         c.gridy = 2;
         wyniki.add(averDays,c);
+
 
 
         // put here code for displaying the final variables and avg days on the second window

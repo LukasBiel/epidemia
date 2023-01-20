@@ -70,11 +70,12 @@ public class EpidemicVisualization extends JPanel {
             g.fillRect(x, y, 5, 5);
         }
         // Udział procentowy i dzień
-        g.setColor(Color.BLUE);
+        g.setColor(Color.ORANGE);
         g.fillRect(620,10,90,35);
         double x = Symulacja.HealthyHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
         double x2 = Symulacja.DeadHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
         double x3 = Symulacja.IllHumans/((double) EpidemicSimulation.NUM_HUMANS)*100;
+        g.setColor(Color.BLUE);
         String value = "Zdrowi ludzie: "+df.format(x)+"%";
         g.drawString(value, 620, 70);
         String value2 = "Zmarli: "+df.format(x2)+"%";
