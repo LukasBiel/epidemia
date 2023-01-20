@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="nowe repozytorium">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicSimulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/EpidemicVisualization.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/HealthStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/HealthStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/epidemia/Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/epidemia/Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EpidemicVisualization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/EpidemicVisualization.java" afterDir="false" />
-    </list>
+    <list default="true" id="b64091f8-949a-4a04-aff6-96547931f2db" name="Changes" comment="legendaa" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +104,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674168663597</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="legendaa">
+      <created>1674244227134</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674244227134</updated>
+    </task>
+    <task id="LOCAL-00004" summary="legendaa">
+      <created>1674244376778</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674244376778</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,7 +167,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nowe repozytorium" />
     <MESSAGE value="mobility" />
-    <option name="LAST_COMMIT_MESSAGE" value="mobility" />
+    <MESSAGE value="legendaa" />
+    <option name="LAST_COMMIT_MESSAGE" value="legendaa" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
