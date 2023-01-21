@@ -1,25 +1,24 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class EntryScreen extends JFrame {
     private final JFrame frame2 = new JFrame("Okno Danych");
     public static final JFrame frame = new JFrame();
-
-    private final JFrame frame3 = new JFrame();
     public static int i = 0 ;
-
-
 
     public void Entry_Screen() {
 
         JPanel menu = new JPanel(new GridBagLayout());
-        // tworzenie okien i ich rozmiarów
         GridBagConstraints c = new GridBagConstraints();
-        frame2.setSize(EpidemicVisualization.WIDTH + 145, EpidemicVisualization.HEIGHT + 45);
+
+        // tworzenie okien i ich rozmiarów
+
+        frame2.setSize(EpidemicVisualization.WIDTH,  200);
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.setLocationRelativeTo(null);
         frame.setSize(EpidemicVisualization.WIDTH + 350, EpidemicVisualization.HEIGHT + 45);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
 
         frame2.add(menu);
 
@@ -29,7 +28,7 @@ public class EntryScreen extends JFrame {
 
         menu.add(num_of_h,c);
 
-        JTextField num_of_humans = new JTextField("100");
+        JTextField num_of_humans = new JTextField("150");
         c.gridx = 0;
         c.gridy = 1;
 
@@ -42,7 +41,7 @@ public class EntryScreen extends JFrame {
         menu.add(num_of_a,c);
 
 
-        JTextField num_of_animals = new JTextField("100");
+        JTextField num_of_animals = new JTextField("150");
         c.gridx = 1;
         c.gridy = 1;
 
@@ -55,7 +54,7 @@ public class EntryScreen extends JFrame {
         menu.add(mobi,c);
 
 
-        JTextField mobility = new JTextField("0.01");
+        JTextField mobility = new JTextField("1");
         c.gridx = 2;
         c.gridy = 1;
 
@@ -107,11 +106,8 @@ public class EntryScreen extends JFrame {
         c.gridx = 3;
         c.gridy = 4;
         isolation.setSelected(false);
-        isolation.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        isolation.addActionListener(e -> {
 
-            }
         });
 
         menu.add(isolation,c);
@@ -124,30 +120,23 @@ public class EntryScreen extends JFrame {
         JButton fastSimulation = new JButton("Uruchom szybką symulację");
         c.gridx = 1;
         c.gridy = 4;
-        fastSimulation.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                EpidemicSimulation.NUM_HUMANS = Integer.parseInt(num_of_humans.getText());
-                EpidemicSimulation.NUM_ANIMALS = Integer.parseInt(num_of_animals.getText());
-
-                Populacja populacja = new Populacja();
-                populacja.Tworzenie_populacji(EpidemicSimulation.NUM_HUMANS, EpidemicSimulation.NUM_ANIMALS);
-
-                Symulacja.HEALTHY_ANIMAL_PROPABILITY = Double.parseDouble(animal_eating.getText());
-                Symulacja.MOBILITY = Double.parseDouble(mobility.getText());
-                Symulacja.HUMAN_ILLNESS_PROBABLITY = Double.parseDouble(human_illness.getText());
-                Symulacja.ANIMAL_ILLNESS_PROPABILITY = Double.parseDouble(animal_illness.getText());
-                frame2.dispose();
-                i=2;
-
-
-
-            }
-
-        });
-        menu.add(fastSimulation,c);
 
         frame2.setVisible(true);
+
+        fastSimulation.addActionListener(e -> {
+
+            EpidemicSimulation.NUM_HUMANS = Integer.parseInt(num_of_humans.getText());
+            EpidemicSimulation.NUM_ANIMALS = Integer.parseInt(num_of_animals.getText());
+
+            Symulacja.HEALTHY_ANIMAL_PROPABILITY = Double.parseDouble(animal_eating.getText());
+            Symulacja.MOBILITY = Double.parseDouble(mobility.getText());
+            Symulacja.HUMAN_ILLNESS_PROBABLITY = Double.parseDouble(human_illness.getText());
+            Symulacja.ANIMAL_ILLNESS_PROPABILITY = Double.parseDouble(animal_illness.getText());
+            frame2.dispose();
+            i=2;
+        });
+
+        menu.add(fastSimulation,c);
 
         openAnim.addActionListener(ae -> {
 
@@ -171,13 +160,5 @@ public class EntryScreen extends JFrame {
 
         });
 
-
-
-        /*fastSimulation.addActionListener(ae -> {
-            frame2.dispose();
-            frame3.add(fastSimulation);
-            frame3.setVisible(true);
-            i = 2;
-        });*/
     }
 }

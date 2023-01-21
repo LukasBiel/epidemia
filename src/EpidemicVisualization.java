@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.text.DecimalFormat;
 
-// klasa wizualizacji
 public class EpidemicVisualization extends JPanel {
     private static final DecimalFormat df = new DecimalFormat("0.0");
     public static final int WIDTH = 600;
@@ -20,7 +19,7 @@ public class EpidemicVisualization extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        // Draw the humans
+        // Rysuje ludzi i zwierzęta
         for (Human human : humans) {
             int x = (int) (human.getX() * WIDTH);
             int y = (int) (human.getY() * HEIGHT);
@@ -45,7 +44,6 @@ public class EpidemicVisualization extends JPanel {
             g.fillOval(x, y, 5, 5);
         }
 
-        // Draw the animals
         for (Animal animal : animals) {
             int x = (int) (animal.getX() * WIDTH);
             int y = (int) (animal.getY() * HEIGHT);
@@ -134,4 +132,3 @@ public class EpidemicVisualization extends JPanel {
 
     }
 }
-

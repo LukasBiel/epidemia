@@ -5,6 +5,7 @@ public class Animal {
     private HealthStatus health;
     private double x;
     private double y;
+    public int iteracja;
 
     public Animal(double x, double y) {
         this.health = HealthStatus.HEALTHY;
@@ -51,14 +52,14 @@ public class Animal {
     }
     public void got_ill(int time) {
         Random random = new Random();
-        javax.swing.Timer timer2 = new Timer(time, e -> {
+        Timer timer2 = new Timer(time, e -> {
             double y = random.nextDouble();
-            if (health == HealthStatus.ILL && y <= 0.95) {
+            if (health == HealthStatus.ILL && y > Symulacja.PROPABILTY_OF_DEATH) {
                 health = HealthStatus.CONVALESCENT;
-                got_convalescent(Symulacja.time_of_healing);
+                got_convalescent(Symulacja.TIME_OF_HEALING);
             }
 
-            if (health == HealthStatus.ILL && y > 0.95) {
+            if (health == HealthStatus.ILL && y <= Symulacja.PROPABILTY_OF_DEATH) {
                 health = HealthStatus.DEAD;}
         });
         timer2.start();
@@ -73,5 +74,29 @@ public class Animal {
         timer3.start();
         timer3.setRepeats(false);
 
+    }
+    public void got_ill2(int i) {
+        Random random = new Random();
+        double y = random.nextDouble();
+        if (this.iteracja == i) {
+            if (health == HealthStatus.ILL && y > Symulacja.PROPABILTY_OF_DEATH) {
+                health = HealthStatus.CONVALESCENT;
+                this.iteracja = i + 200;
+            }
+
+            if (health == HealthStatus.ILL && y <= Symulacja.PROPABILTY_OF_DEATH) {
+                health = HealthStatus.DEAD;
+                Symulacja.DeadHumans++;
+            }
+
+        }
+    }
+
+    public void got_convalescent2(int i) {
+        if (this.iteracja == i){
+            if (health == HealthStatus.CONVALESCENT)
+                health = HealthStatus.HEALTHY;
+
+        }
     }
 }
