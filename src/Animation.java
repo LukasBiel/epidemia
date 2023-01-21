@@ -1,52 +1,51 @@
 import javax.swing.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Animation extends Symulacja {
     private final Human[] humans;
     private final Animal[] animals;
-    public static EpidemicVisualization panel;
-    static List<Integer> illHumans = new ArrayList<>();
+    public static int czy_koniec = 0;
 
 
-    
+
     public Animation(Human[] humans, Animal[] animals) {
         this.humans = humans;
         this.animals = animals;
-        panel = new EpidemicVisualization(EpidemicSimulation.humans, EpidemicSimulation.animals);
     }
     public void animacja(EpidemicVisualization panel){
-        EntryScreen.frame.add(Animation.panel);
+
+        EpidemicSimulation.humans[0].setHealthStatus(HealthStatus.ILL);
+        EpidemicSimulation.animals[0].setHealthStatus(HealthStatus.ILL);
+
+        EntryScreen.frame.add(panel);
 
         humans[0].got_ill(TIME_OF_ILLNESS);
         animals[0].got_ill(TIME_OF_ILLNESS);
         
         Random random = new Random();
-        Timer Dni = new Timer(1000, e -> Day++);
-        Dni.start();
 
+        Timer Dni = new Timer(TIME_OF_A_DAY, e -> Day++);
+        Dni.start();
 
         Timer timer = new Timer(TIME_OF_MOVEMENT, e -> {
             argument_wykres++;
             illHumans.add(IllHumans);
-            Animation.panel.repaint();
-
+            panel.repaint();
 
             //poruszanie się
             for (Human human : humans) {
                 if (human.getHealthStatus()!= HealthStatus.DEAD){
                     double dx = random.nextDouble() * 2 - 1;
                     double dy = random.nextDouble() * 2 - 1;
-                    human.setX(human.getX() + dx * MOBILITY);
-                    human.setY(human.getY() + dy * MOBILITY);}
+                    human.setX(human.getX() + dx * MOBILITY/100);
+                    human.setY(human.getY() + dy * MOBILITY/100);}
             }
             for (Animal animal : animals) {
                 if (animal.getHealthStatus()!= HealthStatus.DEAD){
                     double dx = random.nextDouble() * 2 - 1;
                     double dy = random.nextDouble() * 2 - 1;
-                    animal.setX(animal.getX() + dx * MOBILITY);
-                    animal.setY(animal.getY() + dy * MOBILITY);}
+                    animal.setX(animal.getX() + dx * MOBILITY/100);
+                    animal.setY(animal.getY() + dy * MOBILITY/100);}
             }
             // zarażanie się ludzi
             for (int i = 0; i < EpidemicSimulation.NUM_HUMANS; i++) {
@@ -93,7 +92,7 @@ public class Animation extends Symulacja {
         for (int i = 0;i<1000;i++){
             if (IllHumans == 0){
                 czy_koniec = 1;
-                Animation.panel.repaint();
+                panel.repaint();
                 timer.stop();
                 break;
             }
@@ -101,7 +100,7 @@ public class Animation extends Symulacja {
             //dzieje się to co 5 sekund
             try
             {
-                Thread.sleep(5000);
+                Thread.sleep(TIME_OF_EATING);
             }
             catch(InterruptedException ex)
             {
